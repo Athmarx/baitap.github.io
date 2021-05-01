@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="row mx-0">
+            <div class="col-6">
+              <table class="table table-bordered" >
+                  <tr v-for="row in rows">
+                    <td v-for="col in columns" >{{col}}</td>
+                  </tr>
+              </table>
+              <div v-if="message != ``" class="alert alert-danger" role="alert" >
+                {{message}}
+              </div>
+              <div class="form-group">
+                <button id="btnCreate"  @click="createTable" :disabled="ableToSee">Create Table</button>
+                <button id="btnAddRow" @click="addRow" :disabled="!ableToSee">Add Row</button>
+                <button id="btnAddComlumn" @click="addColumn" :disabled="!ableToSee">Add Column</button>
+              </div>
+              <div class="form-group">
+                <label for="idxRow">Row Index</label>
+                <input id="idxRow" v-model:value="rowValue" class="form-control" :disabled="!ableToSee" placeholder="Nhập dòng cần xóa"></input>
+                <button id="btnRemoveRow" @click="removeRow" :disabled="!ableToSee">Remove Row</button>
+              </div>
+              <div class="form-group">
+                <label for="idxCol">Column Index</label>
+                <input id="idxCol" v-model:value="colValue"class="form-control" :disabled="!ableToSee" placeholder="Nhập cột cần xóa"></input>
+                <button id="btnRemove" @click="removeCol" :disabled="!ableToSee">Remove Column</button>
+              </div> 
+              <div class="form-group">
+                <button id="btnDelete" @click="deleteTable" :disabled="!ableToSee">Delete Table</button>
+              </div>  
+            </div>
+        </div>
+      </div>      
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <script src="./main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+  crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+  crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+  crossorigin="anonymous">
+  </script>
+</html>
