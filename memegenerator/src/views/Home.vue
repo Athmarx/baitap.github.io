@@ -22,6 +22,14 @@
           />
         </div>
       </div> -->
+
+      <div class="input-group">
+        <input v-currency type="text" class="form-control" placeholder="tiền ủng hộ"/>
+        <div class="input-group-append">
+          <span class="input-group-text">đ</span>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-sm d-flex flex-column">
           <div v-for="image in listImage1" :key="image.id" class="py-2">

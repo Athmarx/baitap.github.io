@@ -1,17 +1,16 @@
 <template>
   <div id="app">
     <Header />
-    
-    <router-view />    
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import {Header} from "@/components/Shared";
+import { Header } from "@/components/Shared";
 export default {
-  components: {Header},
-  
-}
+  components: { Header },
+};
 </script>
 
 <style lang="scss">
@@ -35,5 +34,4 @@ export default {
     }
   }
 }
-
 </style>

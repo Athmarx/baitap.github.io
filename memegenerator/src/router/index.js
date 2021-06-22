@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Image from "../views/Image.vue";
+import Login from "../views/Login.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -26,6 +27,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Image,
+  },
+  {
+    path: "/Login",
+    name: "Login",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Login,
   },
 ];
 

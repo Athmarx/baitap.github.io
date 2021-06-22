@@ -153,7 +153,7 @@ export default {
       deep: true,
       handler() {
         // code xu li
-        console.log(this.pagination);
+        //console.log(this.pagination);
       },
     },
     perPage(_perPage) {
